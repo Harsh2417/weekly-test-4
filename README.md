@@ -12,7 +12,7 @@ This is a simple Todo App built with React using the Context API. It allows you 
 ## Installation
 
 1. Clone the repository:
-git clone <repository_url>
+git clone (https://github.com/Harsh2417/weekly-test-4.git)
 
 2. Install the dependencies:
 npm install
