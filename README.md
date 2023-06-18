@@ -37,10 +37,6 @@ The project structure follows a modular approach:
   - `App.js`: The root component of the app.
   - `index.js`: The entry point of the app.
 
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
