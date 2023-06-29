@@ -1,32 +1,31 @@
-import React, { useContext, useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { TodoContext } from './TodoContext';
 
 const InputTodo = () => {
-  const [text, setText] = useState('');
+  const [newTodo, setNewTodo] = useState('');
   const { addTodo } = useContext(TodoContext);
 
   const handleInputChange = (e) => {
-    setText(e.target.value);
+    setNewTodo(e.target.value);
   };
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    if (text.trim() !== '') {
-      addTodo(text);
-      setText('');
+  const handleAddTodo = () => {
+    if (newTodo.trim() !== '') {
+      addTodo(newTodo);
+      setNewTodo('');
     }
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <div>
       <input
         type="text"
-        placeholder="Enter a todo..."
-        value={text}
+        value={newTodo}
         onChange={handleInputChange}
+        placeholder="Enter todo"
       />
-      <button type="submit">Add</button>
-    </form>
+      <button onClick={handleAddTodo}>Add Todo</button>
+    </div>
   );
 };
 
